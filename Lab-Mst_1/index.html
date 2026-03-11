@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p id="myText">This is a paragraph.</p>
+<button onclick="updatePage()">Change Text & Style</button>
+
+<script>
+  // TASK 1: Promise (resolves after 2 seconds)
+  new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Data fetched successfully"), 2000);
+  })
+  .then(message => console.log(message))
+  .catch(error => console.log(error));
+
+
+  // TASK 2: DOM Manipulation
+  function updatePage() {
+    let p = document.getElementById("myText");
+    p.innerText = "Welcome to JavaScript DOM Manipulation";
+    p.style.color = "blue";
+    p.style.fontSize = "24px";
+  }
+</script>
+</body>
